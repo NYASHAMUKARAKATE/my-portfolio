@@ -7,6 +7,7 @@ from .serializers import (
     PostListSerializer, PostDetailSerializer,
     ContactMessageSerializer,
 )
+from .throttles import ContactRateThrottle
 
 
 class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
@@ -47,6 +48,7 @@ class PostViewSet(viewsets.ReadOnlyModelViewSet):
 class ContactMessageViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     queryset = ContactMessage.objects.none()
     serializer_class = ContactMessageSerializer
+    throttle_classes = [ContactRateThrottle]
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
