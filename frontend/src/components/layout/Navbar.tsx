@@ -2,7 +2,8 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -38,10 +39,10 @@ export function Navbar() {
               ))}
               <div className="flex items-center space-x-4 border-l border-border pl-4">
                 <Link href="https://github.com" target="_blank" className="text-muted-foreground hover:text-foreground">
-                  <Github className="w-5 h-5" />
+                  <FaGithub className="w-5 h-5" />
                 </Link>
                 <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground">
-                  <Linkedin className="w-5 h-5" />
+                  <FaLinkedin className="w-5 h-5" />
                 </Link>
               </div>
             </div>

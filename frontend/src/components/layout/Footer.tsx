@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Mail } from "lucide-react"
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 export function Footer() {
   return (
@@ -17,15 +18,15 @@ export function Footer() {
         <div className="flex space-x-6">
           <Link href="https://github.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">GitHub</span>
-            <Github className="w-6 h-6" />
+            <FaGithub className="w-6 h-6" />
           </Link>
           <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">LinkedIn</span>
-            <Linkedin className="w-6 h-6" />
+            <FaLinkedin className="w-6 h-6" />
           </Link>
           <Link href="https://twitter.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">Twitter</span>
-            <Twitter className="w-6 h-6" />
+            <FaTwitter className="w-6 h-6" />
           </Link>
           <Link href="mailto:hello@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">Email</span>
