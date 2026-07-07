@@ -29,11 +29,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] -z-10 animate-pulse" style={{ animationDelay: "2s" }} />
-
+    <section className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           className="max-w-3xl"
@@ -41,20 +37,18 @@ export function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-ping" />
+          <motion.div variants={itemVariants} className="inline-flex items-center rounded-full border border-border bg-muted/50 px-3 py-1 text-sm font-medium text-muted-foreground mb-6">
+            <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2" />
             Available for new opportunities
           </motion.div>
           
-          <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6">
-            Building software that <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              makes an impact.
-            </span>
+          <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 text-foreground">
+            Architecting scalable systems & <br className="hidden sm:block" />
+            enterprise software.
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-            I'm a full-stack engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently focused on building accessible, human-centered products.
+            I'm a Computer Science student at NUST and Technical Lead specializing in Python, Java, and TypeScript. I build robust, portfolio-grade solutions tailored for corporate and enterprise sectors.
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">

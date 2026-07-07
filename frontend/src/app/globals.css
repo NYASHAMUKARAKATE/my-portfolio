@@ -16,43 +16,43 @@
 }
 
 :root {
-  /* Defaulting to a dark, sleek aesthetic for a dev portfolio */
-  --background: #0f172a; /* Slate 900 */
-  --foreground: #f8fafc; /* Slate 50 */
+  /* Sophisticated, grounded Dark Mode */
+  --background: #121212;
+  --foreground: #f3f4f6; /* Gray 100 */
   
-  --card: #1e293b; /* Slate 800 */
-  --card-foreground: #f8fafc;
+  --card: #1c1c1c;
+  --card-foreground: #f3f4f6;
   
-  --primary: #6366f1; /* Indigo 500 */
-  --primary-foreground: #ffffff;
+  --primary: #f3f4f6;
+  --primary-foreground: #121212;
   
-  --muted: #334155; /* Slate 700 */
-  --muted-foreground: #94a3b8; /* Slate 400 */
+  --muted: #27272a; /* Zinc 800 */
+  --muted-foreground: #a1a1aa; /* Zinc 400 */
   
-  --border: #334155;
+  --border: #27272a;
   
-  --accent: #8b5cf6; /* Violet 500 */
-  --accent-foreground: #ffffff;
+  --accent: #27272a;
+  --accent-foreground: #f3f4f6;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
+    --background: #fafafa;
+    --foreground: #171717;
     
-    --card: #f8fafc;
-    --card-foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #171717;
     
-    --primary: #4f46e5;
-    --primary-foreground: #ffffff;
+    --primary: #171717;
+    --primary-foreground: #fafafa;
     
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
     
-    --border: #e2e8f0;
+    --border: #e4e4e7;
     
-    --accent: #7c3aed;
-    --accent-foreground: #ffffff;
+    --accent: #f4f4f5;
+    --accent-foreground: #171717;
   }
 }
 
