@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer Portfolio",
+  title: "Nyasha Mukarakate | Software Engineer Portfolio",
   description: "A premium software engineering portfolio.",
 };
 

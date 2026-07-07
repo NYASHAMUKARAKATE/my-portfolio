@@ -21,10 +21,10 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold tracking-tighter">
-              Nyasha<span className="text-primary">Mukarakate</span>
+              Dev<span className="text-primary">Nyasha Mukarakate</span>
             </Link>
           </div>
-          
+
           {/* Desktop Nav */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
@@ -41,7 +41,7 @@ export function Navbar() {
                 <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground">
                   <FaGithub className="w-5 h-5" />
                 </Link>
-                <Link href="https://linkedin.com/in/nyasha-mukarakate" target="_blank" className="text-muted-foreground hover:text-foreground">
+                <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground">
                   <FaLinkedin className="w-5 h-5" />
                 </Link>
               </div>
