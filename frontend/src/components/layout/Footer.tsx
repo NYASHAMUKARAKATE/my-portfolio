@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-6 md:mb-0">
           <Link href="/" className="text-xl font-bold tracking-tighter">
-            Dev<span className="text-primary">Portfolio</span>
+            Nyasha<span className="text-primary">Mukarakate</span>
           </Link>
           <p className="text-muted-foreground text-sm mt-2">
             Building digital products, brands, and experience.
@@ -16,26 +16,22 @@ export function Footer() {
         </div>
         
         <div className="flex space-x-6">
-          <Link href="https://github.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">GitHub</span>
             <FaGithub className="w-6 h-6" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="https://linkedin.com/in/nyasha-mukarakate" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">LinkedIn</span>
             <FaLinkedin className="w-6 h-6" />
           </Link>
-          <Link href="https://twitter.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
-            <span className="sr-only">Twitter</span>
-            <FaTwitter className="w-6 h-6" />
-          </Link>
-          <Link href="mailto:hello@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="mailto:mukarakatenyasha34@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
             <span className="sr-only">Email</span>
             <Mail className="w-6 h-6" />
           </Link>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-border/50 text-center md:text-left text-sm text-muted-foreground flex flex-col md:flex-row justify-between">
-        <p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Nyasha Mukarakate. All rights reserved. | +263 789 964 673</p>
         <p className="mt-2 md:mt-0">Designed with Next.js & Tailwind</p>
       </div>
     </footer>

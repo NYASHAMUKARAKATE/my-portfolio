@@ -18,7 +18,7 @@ export function About() {
             className="prose prose-invert max-w-none text-muted-foreground"
           >
             <p className="text-lg leading-relaxed font-medium text-foreground">
-              🎓 Education & Leadership
+              Education & Leadership
             </p>
             <p className="text-base leading-relaxed mt-2">
               Pursuing a Bachelor of Science Honours in Computer Science at the National University of Science and Technology (NUST). I serve as the Head of the Cloud Computing department for a student technology club, and act as the lead architect coordinating a five-member development team.
@@ -28,7 +28,7 @@ export function About() {
             </p>
 
             <p className="text-lg leading-relaxed font-medium text-foreground mt-8">
-              💻 Technical Expertise
+              Technical Expertise
             </p>
             <p className="text-base leading-relaxed mt-2">
               <strong>Languages & Frameworks:</strong> Proficient in Java, Python (Flask/FastAPI), TypeScript (React/Next.js), and Flutter for cross-platform mobile development.
