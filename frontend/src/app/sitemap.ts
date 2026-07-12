@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch all posts for dynamic sitemap generation
   let posts: any[] = []
   try {
-    const res = await fetch("http://127.0.0.1:8000/api/posts/")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || `${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}'"}/api/posts/")
     if (res.ok) {
       const data = await res.json()
       posts = data.results || []

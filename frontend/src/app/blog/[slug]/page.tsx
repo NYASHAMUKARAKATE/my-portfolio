@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react"
 
 async function getPost(slug: string) {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/api/posts/${slug}/`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/posts/${slug}/`, {
       next: { revalidate: 60 }, // Revalidate every minute
     })
 
