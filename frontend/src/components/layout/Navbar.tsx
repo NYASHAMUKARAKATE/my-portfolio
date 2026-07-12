@@ -6,6 +6,8 @@ import { Menu, X } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { motion, AnimatePresence } from "framer-motion"
 
+import { ThemeToggle } from "@/components/ui/ThemeToggle"
+
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -46,6 +48,7 @@ export function Navbar() {
                 <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground">
                   <FaLinkedin className="w-5 h-5" />
                 </Link>
+                <ThemeToggle />
               </div>
             </div>
           </div>

@@ -17,6 +17,26 @@
 }
 
 :root {
+  /* Crisp, clean Light Mode */
+  --background: #fafafa;
+  --foreground: #171717;
+  
+  --card: #ffffff;
+  --card-foreground: #171717;
+  
+  --primary: #171717;
+  --primary-foreground: #fafafa;
+  
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  
+  --border: #e4e4e7;
+  
+  --accent: #f4f4f5;
+  --accent-foreground: #171717;
+}
+
+.dark {
   /* Sophisticated, grounded Dark Mode */
   --background: #121212;
   --foreground: #f3f4f6; /* Gray 100 */
@@ -34,27 +54,6 @@
   
   --accent: #27272a;
   --accent-foreground: #f3f4f6;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #fafafa;
-    --foreground: #171717;
-    
-    --card: #ffffff;
-    --card-foreground: #171717;
-    
-    --primary: #171717;
-    --primary-foreground: #fafafa;
-    
-    --muted: #f4f4f5;
-    --muted-foreground: #71717a;
-    
-    --border: #e4e4e7;
-    
-    --accent: #f4f4f5;
-    --accent-foreground: #171717;
-  }
 }
 
 * {

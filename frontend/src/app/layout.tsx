@@ -34,19 +34,23 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("antialiased", inter.variable)}>
+    <html lang="en" className={cn("antialiased", inter.variable)} suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans text-foreground flex flex-col relative">
-        <Navbar />
-        <main className="flex-1 w-full">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main className="flex-1 w-full">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
