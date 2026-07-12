@@ -7,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/"],
     },
-    // Replace this URL when deploying to production
-    sitemap: "https://your-production-domain.com/sitemap.xml",
+    sitemap: "https://my-portfolio-tau-eight-55.vercel.app/sitemap.xml",
   }
 }

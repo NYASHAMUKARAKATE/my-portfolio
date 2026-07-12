@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://your-production-domain.com" // Replace when deploying
+  const baseUrl = "https://my-portfolio-tau-eight-55.vercel.app"
 
   // Fetch all posts for dynamic sitemap generation
   let posts: any[] = []
