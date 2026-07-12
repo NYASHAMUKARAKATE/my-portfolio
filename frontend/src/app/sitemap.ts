@@ -1,0 +1,34 @@
+import type { MetadataRoute } from "next"
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = "https://your-production-domain.com" // Replace when deploying
+
+  // Fetch all posts for dynamic sitemap generation
+  let posts: any[] = []
+  try {
+    const res = await fetch("http://127.0.0.1:8000/api/posts/")
+    if (res.ok) {
+      const data = await res.json()
+      posts = data.results || []
+    }
+  } catch (error) {
+    console.error("Error fetching posts for sitemap:", error)
+  }
+
+  const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.published_at),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }))
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    ...postEntries,
+  ]
+}

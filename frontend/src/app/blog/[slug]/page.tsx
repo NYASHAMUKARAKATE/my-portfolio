@@ -22,6 +22,40 @@ async function getPost(slug: string) {
   }
 }
 
+import type { Metadata } from "next"
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPost(slug)
+
+  if (!post) {
+    return { title: "Post Not Found" }
+  }
+
+  // Strip markdown for the description
+  const excerpt = post.content.replace(/<[^>]*>?/gm, '').substring(0, 160) + "..."
+
+  return {
+    title: post.title,
+    description: excerpt,
+    openGraph: {
+      title: post.title,
+      description: excerpt,
+      type: "article",
+      publishedTime: post.published_at,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: excerpt,
+    },
+  }
+}
+
 export default async function BlogPostPage({
   params,
 }: {

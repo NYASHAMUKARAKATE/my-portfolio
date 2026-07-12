@@ -101,6 +101,6 @@ To run this project locally, you will need to start both the backend server and 
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-## 📝 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).

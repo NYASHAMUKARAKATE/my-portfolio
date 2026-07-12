@@ -11,8 +11,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nyasha Mukarakate | Software Engineer Portfolio",
-  description: "A premium software engineering portfolio.",
+  title: {
+    template: "%s | Nyasha Mukarakate",
+    default: "Nyasha Mukarakate | Software Engineer Portfolio",
+  },
+  description: "Computer Science student at NUST & Technical Lead. Specializing in Python, Java, TypeScript, and architecting scalable enterprise systems.",
+  keywords: ["Software Engineer", "Full Stack Developer", "Python", "Java", "TypeScript", "NUST", "Cloud Computing"],
+  authors: [{ name: "Nyasha Mukarakate" }],
+  creator: "Nyasha Mukarakate",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://github.com/NYASHAMUKARAKATE", // Replace with production URL when deployed
+    title: "Nyasha Mukarakate | Software Engineer",
+    description: "Computer Science student at NUST & Technical Lead. Specializing in Python, Java, and scalable enterprise systems.",
+    siteName: "Nyasha Mukarakate Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nyasha Mukarakate | Software Engineer",
+    description: "Computer Science student at NUST & Technical Lead. Specializing in Python, Java, and scalable enterprise systems.",
+  },
 };
 
 export default function RootLayout({
