@@ -42,10 +42,10 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center space-x-4 border-l border-border pl-4">
-                <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground">
+                <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground" aria-label="GitHub Profile">
                   <FaGithub className="w-5 h-5" />
                 </Link>
-                <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground">
+                <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground" aria-label="LinkedIn Profile">
                   <FaLinkedin className="w-5 h-5" />
                 </Link>
                 <ThemeToggle />
@@ -88,10 +88,10 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center space-x-6 px-3 pt-4 mt-2 border-t border-border">
-                <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground">
+                <Link href="https://github.com/NYASHAMUKARAKATE" target="_blank" className="text-muted-foreground hover:text-foreground" aria-label="GitHub Profile">
                   <FaGithub className="w-6 h-6" />
                 </Link>
-                <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground">
+                <Link href="https://linkedin.com/in/nyasha-mukarakate/" target="_blank" className="text-muted-foreground hover:text-foreground" aria-label="LinkedIn Profile">
                   <FaLinkedin className="w-6 h-6" />
                 </Link>
               </div>
