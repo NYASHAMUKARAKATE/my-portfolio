@@ -65,7 +65,7 @@ export function Contact() {
             className="space-y-8"
           >
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're looking for a developer for your next project, want to discuss a technical challenge, or simply want to say hi — feel free to reach out.
+              Whether you're looking for a developer for your next project, want to discuss a technical challenge, or simply want to say hi,feel free to reach out.
             </p>
 
             <div className="space-y-4">
