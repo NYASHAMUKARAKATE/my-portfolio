@@ -13,7 +13,7 @@ type Project = {
   image: string | null
   github_url: string
   live_url: string
-  technologies: string // Assuming CSV or similar based on typical simple Django setups
+  tech_stack: string[]
   is_featured: boolean
 }
 
@@ -42,7 +42,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/30 font-medium">
+              <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/30 font-medium text-center px-4">
                 No Image Provided
               </div>
             )}
@@ -80,11 +80,11 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
             </p>
             
             {/* Technologies */}
-            {project.technologies && (
+            {project.tech_stack && Array.isArray(project.tech_stack) && project.tech_stack.length > 0 && (
               <div className="mt-6 flex flex-wrap gap-2">
-                {project.technologies.split(',').map((tech) => (
-                  <Badge key={tech.trim()} variant="secondary" className="text-xs">
-                    {tech.trim()}
+                {project.tech_stack.map((tech) => (
+                  <Badge key={tech} variant="secondary" className="text-xs">
+                    {tech}
                   </Badge>
                 ))}
               </div>
