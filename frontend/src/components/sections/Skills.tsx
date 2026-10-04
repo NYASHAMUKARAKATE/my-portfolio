@@ -1,28 +1,30 @@
 import { SectionHeading } from "@/components/ui/SectionHeading"
 import { SkillsGrid } from "./SkillsGrid"
+import { Badge } from "@/components/ui/Badge"
+import { Award } from "lucide-react"
 
-async function getSkills() {
-  try {
-    // Next.js fetch with revalidation (cache for 1 hour)
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/skills/`, {
-      next: { revalidate: 3600 },
-    })
-    
-    if (!res.ok) {
-      throw new Error("Failed to fetch skills")
-    }
-    
-    const data = await res.json()
-    // DRF returns paginated data by default in a 'results' array
-    return data.results || []
-  } catch (error) {
-    console.error("Error fetching skills:", error)
-    return []
-  }
-}
+const STATIC_SKILLS = [
+  { id: 1, name: "React", category: "frontend", proficiency: 0 },
+  { id: 2, name: "TypeScript", category: "frontend", proficiency: 0 },
+  { id: 5, name: "Flutter", category: "frontend", proficiency: 0 },
+  { id: 6, name: "HTML/CSS", category: "frontend", proficiency: 0 },
+  { id: 7, name: "JavaScript", category: "frontend", proficiency: 0 },
+  { id: 8, name: "Python", category: "backend", proficiency: 0 },
+  { id: 10, name: "FastAPI", category: "backend", proficiency: 0 },
+  { id: 11, name: "Java", category: "backend", proficiency: 0 },
+  { id: 12, name: "Spring Boot", category: "backend", proficiency: 0 },
+  { id: 13, name: "PostgreSQL", category: "backend", proficiency: 0 },
+  { id: 15, name: "Git", category: "tools", proficiency: 0 },
+  { id: 17, name: "Postman", category: "tools", proficiency: 0 },
+];
 
-export async function Skills() {
-  const skills = await getSkills()
+const CERTIFICATIONS = [
+  "Responsive Web Design",
+  "Python"
+];
+
+export function Skills() {
+  const skills = STATIC_SKILLS;
 
   return (
     <section id="skills" className="py-20 bg-muted/30">
@@ -33,9 +35,23 @@ export async function Skills() {
           <SkillsGrid skills={skills} />
         ) : (
           <div className="text-center py-12 text-muted-foreground">
-            No skills data available. Please ensure the backend API is running and data is populated.
+            No skills data available.
           </div>
         )}
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Award className="w-6 h-6 text-primary" />
+            Certifications
+          </h3>
+          <div className="flex flex-wrap gap-4">
+            {CERTIFICATIONS.map((cert) => (
+              <Badge key={cert} variant="outline" className="text-sm px-4 py-2 border-primary/50 text-foreground bg-background shadow-sm">
+                {cert}
+              </Badge>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
